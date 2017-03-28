@@ -1,2 +1,2 @@
-# scala_course1
-Corsera Scala Course Assignments
+# Functional Programming Principles in Scala
+## Course URL: https://www.coursera.org/learn/progfun1/home/welcome
