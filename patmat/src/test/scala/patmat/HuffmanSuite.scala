@@ -14,6 +14,15 @@ class HuffmanSuite extends FunSuite {
 		val t2 = Fork(Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5), Leaf('d',4), List('a','b','d'), 9)
 	}
 
+  /*test("test someText") {
+    new TestTrees {
+      assert(createCodeTree("someText".toList).toString() === t1)
+      //assert(1 == 1)
+    }
+  }          */
+
+
+
 
   test("weight of a larger tree") {
     new TestTrees {
@@ -40,6 +49,12 @@ class HuffmanSuite extends FunSuite {
     }
   }
 
+  test("times of a char list -Hello") {
+    new TestTrees {
+      assert(List(('H',1), ('e',1), ('l', 2), ('o', 1)) === times("Hello".toList).reverse)
+    }
+  }
+
   test("string2chars(\"hello, world\")") {
     assert(string2Chars("hello, world") === List('h', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o', 'r', 'l', 'd'))
   }
@@ -57,7 +72,7 @@ class HuffmanSuite extends FunSuite {
 
   test("combine of some leaf list") {
     val leaflist = List(Leaf('e', 1), Leaf('t', 2), Leaf('x', 4))
-    assert(combine(leaflist) === List(Fork(Leaf('e',1),Leaf('t',2),List('e', 't'),3), Leaf('x',4)))
+    assert(combine(leaflist) === List(Fork(Leaf('e', 1), Leaf('t', 2), List('e', 't'), 3), Leaf('x', 4)))
   }
 
   /*test("until all leaves are merged into single") {
@@ -65,31 +80,49 @@ class HuffmanSuite extends FunSuite {
     val retTree = until(singleton, combine)(leaflist)
     assert(retTree.length==1)
   }*/
-  test("encode a very short text with t1")        {
+  test("encode a very short text with frenchCode") {
         new TestTrees {
-          assert(encode(frenchCode)("sex".toList) === List(0,1,1))
+          assert(encode(frenchCode)("sdx".toList) === List(0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0))
         }
   }
 
-  test("encode a very short text with frenchCode")        {
+  test("encode a very short text with t1") {
        new TestTrees {
           assert(encode(t1)("ab".toList) === List(0,1))
        }
   }
 
-  /*test("decode using french Code tree") {
+  test("decode using french Code tree") {
     new TestTrees {
       assert(decode(frenchCode,
-        List(1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1)) === "question".toList)
+        List(1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1)) === List('e', 'n', 'c', 'o', 'r', 'e', 'u', 'n', 't', 'e', 'x', 't', 'e', 't', 'r', 'e', 's', 's', 'e', 'c', 'r'))
     }
-  }*/
+  }
+
+  test("decode and encode long seq should be identity") {
+    val l1 = List(1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1)
+    new TestTrees {
+      val l2 = quickEncode(frenchCode)(decode(frenchCode, l1))
+       assert(l1.length == l2.length)
+     }
+  }
+
 
   test("decode and encode a very short text should be identity") {
     new TestTrees {
       assert(decode(t1, encode(t1)("ab".toList)) === "ab".toList)
-      print(quickEncode(t1)("ab".toList))
       assert(decode(t1, quickEncode(t1)("ab".toList)) === "ab".toList)
     }
   }
 
+  test("quick encode long text") {
+    val l1 = List('t', 'u', 'r', 'e', ' ', 'f', 'r', 'o', 'm', ' ', '4', '5', ' ', 'B', 'C', ',', ' ', 'm', 'a', 'k', 'i', 'n', 'g', ' ', 'i', 't', ' ', 'o', 'v', 'e', 'r', ' ', '2', '0', '0', '0', ' ', 'y', 'e', 'a', 'r', 's', ' ', 'o', 'l', 'd', '.', ' ', 'R', 'i', 'c', 'h', 'a', 'r', 'd', ' ', 'M', 'c')
+    println(l1)
+    println(encode(frenchCode)(l1))
+    println(quickEncode(frenchCode)(l1))
+    //println(decode(frenchCode, encode(frenchCode)(l1)))
+    new TestTrees {
+      assert(encode(frenchCode)(l1) === quickEncode(frenchCode)(l1))
+    }
+  }
 }
