@@ -23,23 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Huffman.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Huffman.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/patmat/Huffman.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="156" column="33" lean-forward="false" selection-start-line="156" selection-start-column="33" selection-end-line="156" selection-end-column="33" />
-              <folding>
-                <element signature="e#16#31#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="4650">
+              <caret line="310" column="75" lean-forward="true" selection-start-line="310" selection-start-column="75" selection-end-line="310" selection-end-column="75" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HuffmanSuite.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HuffmanSuite.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/patmat/HuffmanSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="102" column="4" lean-forward="false" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="4" />
+            <state relative-caret-position="118">
+              <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="107" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -55,8 +53,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/scala/patmat/HuffmanSuite.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/patmat/Huffman.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/patmat/HuffmanSuite.scala" />
       </list>
     </option>
   </component>
@@ -596,15 +594,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HuffmanSuite - 2017.04.21 at 23h 26m 01s.xml">
-      <configuration name="HuffmanSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HuffmanSuite - 2017.04.21 at 23h 38m 48s.xml">
-      <configuration name="HuffmanSuite" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HuffmanSuite - 2017.04.21 at 23h 40m 35s.xml">
-      <configuration name="HuffmanSuite" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HuffmanSuite - 2017.04.21 at 23h 45m 13s.xml">
       <configuration name="HuffmanSuite" configurationId="JUnit" />
     </history-entry>
@@ -624,6 +613,15 @@
       <configuration name="HuffmanSuite" configurationId="JUnit" />
     </history-entry>
     <history-entry file="HuffmanSuite - 2017.04.22 at 00h 46m 36s.xml">
+      <configuration name="HuffmanSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HuffmanSuite - 2017.04.22 at 01h 04m 56s.xml">
+      <configuration name="HuffmanSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HuffmanSuite - 2017.04.22 at 01h 09m 46s.xml">
+      <configuration name="HuffmanSuite" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HuffmanSuite - 2017.04.22 at 01h 10m 34s.xml">
       <configuration name="HuffmanSuite" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -685,21 +683,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/patmat/HuffmanSuite.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/patmat/Huffman.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="102" column="4" lean-forward="false" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="4" />
+        <state relative-caret-position="4650">
+          <caret line="310" column="75" lean-forward="true" selection-start-line="310" selection-start-column="75" selection-end-line="310" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/patmat/Huffman.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/patmat/HuffmanSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="156" column="33" lean-forward="false" selection-start-line="156" selection-start-column="33" selection-end-line="156" selection-end-column="33" />
-          <folding>
-            <element signature="e#16#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="118">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="107" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
