@@ -155,7 +155,7 @@ object Huffman {
    */
     def combine(trees: List[CodeTree]): List[CodeTree] = {
       def insertTotree(toInsert: CodeTree, listToInsert: List[CodeTree]) : List[CodeTree] = {
-        var partList = listToInsert.partition((weight(_) < weight(toInsert)))
+        val partList = listToInsert.partition((weight(_) < weight(toInsert)))
         partList._1 ::: List(toInsert) ::: partList._2
       }
 
