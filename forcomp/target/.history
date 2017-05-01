@@ -1,0 +1,33 @@
+compile
+test
+test wordOccurrences
+test#wordOccurrences
+test.wordOccurrences
+clear
+cls
+val dictionary: List[Word] = loadDictionary
+console
+compile
+test
+1 + 1
+console
+1 + 1
+console
+submit sreevathsan.ravi@gmail.com cqyrg4LzXJQppery
+console
+compile
+test
+console
+test
+submit sreevathsan.ravi@gmail.com KgatK07dtS9pS0Oh
+console
+compile
+test
+submit sreevathsan.ravi@gmail.com XxtIUqaGcckYlrsJ
+test
+submit sreevathsan.ravi@gmail.com XxtIUqaGcckYlrsJ
+test
+submit sreevathsan.ravi@gmail.com XxtIUqaGcckYlrsJ
+console
+test
+submit sreevathsan.ravi@gmail.com dBdNuSHPKW9DDE7F

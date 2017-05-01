@@ -14,15 +14,6 @@ class HuffmanSuite extends FunSuite {
 		val t2 = Fork(Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5), Leaf('d',4), List('a','b','d'), 9)
 	}
 
-  /*test("test someText") {
-    new TestTrees {
-      assert(createCodeTree("someText".toList).toString() === t1)
-      //assert(1 == 1)
-    }
-  }          */
-
-
-
 
   test("weight of a larger tree") {
     new TestTrees {
